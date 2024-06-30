@@ -1,7 +1,7 @@
 {
     "userspace_version": "1.0",
     "build_targets": [
-        ["crkbd/rev1", "DeadEnglish"],
-        ["lily58/rev1", "DeadEnglish"]
+        ["crkbd/rev1", "deadenglish"],
+        ["lily58/rev1", "deadenglish"]
     ]
 }
