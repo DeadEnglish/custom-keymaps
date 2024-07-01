@@ -45,20 +45,19 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * ,---------------------------------------.                    ,-----------------------------------------.
  * |      |      |      |      |      |      |                    |      |      |      |      |      |      |
  * |------+------+------+------+------+------|                    |------+------+------+------+------+------|
- * |      |      |      |      |  M0  |  M1  |                    |   %  |   7  |   8  |   9  |   +  | Bksp |
+ * |      |      |      |      |LAlt+4|LAlt+5|                    |   %  |   7  |   8  |   9  |   +  | Bksp |
  * |------+------+------+------+------+------|                    |------+------+------+------+------+------|
  * |      |      | prev | play | next |      |-------.    ,-------|   *  |   4  |   5  |   6  |   =  |      |
  * |------+------+------+------+------+------|       |    |       |------+------+------+------+------+------|
- * |      |      | cut  | copy | paste|      |-------|    |-------|   /  |   1  |   2  |   3  |   .  | NumL |
+ * |      |      |      |      |      |      |-------|    |-------|   /  |   1  |   2  |   3  |   .  | NumL |
  * `-----------------------------------------/       /     \      \-----------------------------------------'
  *                   |      |      |      | /Space  /       \   0  \  |      | Bksp |      |
  *                   |      |      |      |/       /         \      \ |      |      |      |
  *                   `----------------------------'           '------''--------------------'
- *                   TODO: Implement x/c/p, media keys & screenshot modifiers
  */
 [_NUMBER] = LAYOUT(
     KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,                    KC_NO,  KC_NO,    KC_NO,  KC_NO,  KC_NO,   KC_NO,
-    KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,                  KC_PERC,   KC_7,    KC_8,    KC_9,  KC_PLUS, KC_BSPC,
+    KC_NO,   KC_NO,   KC_NO,   KC_NO,LSG(KC_4),LSG(KC_5),                  KC_PERC,   KC_7,    KC_8,    KC_9,  KC_PLUS, KC_BSPC,
     KC_NO,   KC_NO, KC_MPRV, KC_MPLY, KC_MNXT,   KC_NO,                  KC_ASTR,   KC_4,    KC_5,    KC_6,  KC_EQL,   KC_NO,
     KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,KC_SLASH,   KC_1,    KC_2,    KC_3,  KC_DOT,  KC_NUM,
                                KC_NO,   KC_NO,   KC_NO,   KC_NO,    KC_0,  KC_NO, KC_BSPC,   KC_NO
@@ -88,7 +87,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * ,-----------------------------------------.                    ,-----------------------------------------.
  * |      |      |      |      |      |      |                    |      |      |      |      |      |      |
  * |------+------+------+------+------+------|                    |------+------+------+------+------+------|
- * |      |  F1  |  F2  |  F3  |  F4  |      |                    |      |      |      |      |      |      |
+ * |      |  F1  |  F2  |  F3  |  F4  |      |                    |      |   w← |      |      |  w←  |      |
  * |------+------+------+------+------+------|                    |------+------+------+------+------+------|
  * |      |  F5  |  F6  |  F7  |  F8  |      |-------.    ,-------|      |   ←  |   ↓  |   ↑  |  ←   |      |
  * |------+------+------+------+------+------|       |    |       |------+------+------+------+------+------|
@@ -99,10 +98,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  *                   `----------------------------'           '------''--------------------'
  */
 [_NAV] = LAYOUT(
-    KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,                     KC_NO,   KC_NO,   KC_NO,  KC_NO,   KC_NO,   KC_NO,
-    KC_NO, KC_F1,   KC_F2,   KC_F3,   KC_F4,     KC_NO,                     KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,
-    KC_NO, KC_F5,   KC_F6,   KC_F7,   KC_F8,     KC_NO,                   KC_LEFT, KC_DOWN, KC_UP, KC_RIGHT,   KC_NO,   KC_NO,
-    KC_NO, KC_F9,   KC_F10,  KC_F11, KC_F12,     KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,
+    KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,                     KC_NO,   KC_NO,   KC_NO,  KC_NO,            KC_NO,   KC_NO,
+    KC_NO, KC_F1,   KC_F2,   KC_F3,   KC_F4,     KC_NO,             LALT(KC_LEFT),   KC_NO,   KC_NO,  LALT(KC_RIGHT),   KC_NO,   KC_NO,
+    KC_NO, KC_F5,   KC_F6,   KC_F7,   KC_F8,     KC_NO,                   KC_LEFT, KC_DOWN,   KC_UP,  KC_RIGHT,         KC_NO,   KC_NO,
+    KC_NO, KC_F9,   KC_F10,  KC_F11, KC_F12,     KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,  KC_NO,            KC_NO,   KC_NO,
                                KC_NO,   KC_NO,   KC_NO,  KC_SPC,  KC_ENT,   KC_NO,   KC_NO,   KC_NO
 ),
 };
