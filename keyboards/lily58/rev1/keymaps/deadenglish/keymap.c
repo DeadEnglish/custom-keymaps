@@ -12,10 +12,10 @@ enum mod_keys {
     MDS = MT(MOD_LGUI, KC_S),
     MDD = MT(MOD_LALT, KC_D),
     MDF = MT(MOD_LCTL, KC_F),
-    MDJ = MT(MOD_LSFT, KC_J),
-    MDK = MT(MOD_LGUI, KC_K),
-    MDL = MT(MOD_LALT, KC_L),
-    MDSC = MT(MOD_LCTL, KC_SCLN),
+    MDJ = MT(MOD_RCTL, KC_J),
+    MDK = MT(MOD_RALT, KC_K),
+    MDL = MT(MOD_RGUI, KC_L),
+    MDSC = MT(MOD_RSFT, KC_SCLN),
 };
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
@@ -25,7 +25,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |------+------+------+------+------+------|                    |------+------+------+------+------+------|
  * | Tab  |   Q  |   W  |   E  |   R  |   T  |                    |   Y  |   U  |   I  |   O  |   P  |BackSP|
  * |------+------+------+------+------+------|                    |------+------+------+------+------+------|
- * | ESC  |A/LSFT|S/LGUI|D/LALT|F/LCTR|   G  |-------.    ,-------|   H  |J/LSFT|K/LGUI|L/LALT|;/LCTR|  '   |
+ * | ESC  |A/LSFT|S/LGUI|D/LALT|F/LCTR|   G  |-------.    ,-------|   H  |J/RCRT|K/RALT|L/RGUI|;/RSFT|  '   |
  * |------+------+------+------+------+------|   [   |    |    ]  |------+------+------+------+------+------|
  * |LShift|   Z  |   X  |   C  |   V  |   B  |-------|    |-------|   N  |   M  |   ,  |   .  |   /  |RShift|
  * `-----------------------------------------/       /     \      \-----------------------------------------'
