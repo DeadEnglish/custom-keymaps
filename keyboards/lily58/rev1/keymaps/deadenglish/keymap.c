@@ -66,7 +66,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * ,-----------------------------------------.                    ,-----------------------------------------.
  * |      |      |      |      |      |      |                    |      |      |      |      |      |      |
  * |------+------+------+------+------+------|                    |------+------+------+------+------+------|
- * |      |      |      |      |LAlt+4|LAlt+5|                    |      |   w← |      |      |  w←  |      |
+ * |      |      |  🔈  |  🔊  |LAlt+4|LAlt+5|                    |      |   w← |      |      |  w←  |      |
  * |------+------+------+------+------+------|                    |------+------+------+------+------+------|
  * |      |      | prev | play | next |      |-------.    ,-------|      |   ←  |   ↓  |   ↑  |  ←   |      |
  * |------+------+------+------+------+------|       |    |       |------+------+------+------+------+------|
@@ -78,8 +78,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  */
 [_NAV] = LAYOUT(
     KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,                     KC_NO,   KC_NO,   KC_NO,  KC_NO,            KC_NO,   KC_NO,
-    KC_NO,   KC_NO,   KC_NO,   KC_NO,LSG(KC_4),LSG(KC_5),             LALT(KC_LEFT),   KC_NO,   KC_NO,  LALT(KC_RIGHT),   KC_NO,   KC_NO,
-    KC_NO,   KC_NO, KC_MPRV, KC_MPLY, KC_MNXT,   KC_NO,                   KC_LEFT, KC_DOWN,   KC_UP,  KC_RIGHT,         KC_NO,   KC_NO,
+    KC_NO, KC_NO,KC_KB_VOLUME_DOWN,KC_KB_VOLUME_UP,LSG(KC_4),LSG(KC_5),     LALT(KC_LEFT),   KC_NO,   KC_NO,  LALT(KC_RIGHT),   KC_NO,   KC_NO,
+    KC_NO,   KC_NO, KC_MPRV, KC_MPLY, KC_MNXT,   KC_NO,                     KC_LEFT, KC_DOWN,   KC_UP,  KC_RIGHT,         KC_NO,   KC_NO,
     KC_TRNS,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,  KC_NO,            KC_NO,   KC_NO,
                                KC_NO,   KC_NO,   KC_NO, KC_TRNS,  KC_TRNS,   KC_NO,   KC_NO,   KC_NO
 ),
