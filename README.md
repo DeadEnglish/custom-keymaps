@@ -39,6 +39,10 @@ This is a template repository which allows for an external set of QMK keymaps to
 
 Alternatively, if you configured your build targets above, you can use `qmk userspace-compile` to build all of your userspace targets at once.
 
+> [>!NOTE]
+> Because the Corne keboard is using a RP2040 as the controller, when building run the following command
+> `qmk compile -kb crkbd/rev1 -km DeadEnglish -e CONVERT_TO=rp2040_ce`
+
 ## Extra info
 
 If you wish to point GitHub actions to a different repository, a different branch, or even a different keymap name, you can modify `.github/workflows/build_binaries.yml` to suit your needs.
